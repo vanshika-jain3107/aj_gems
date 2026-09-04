@@ -121,10 +121,14 @@ export const gemstones: Gemstone[] = [
     description:
       "2.88 Ct Natural Zambian Emerald (Panna) Square Cut | Unheated Loose Gemstone | Certified Green Emerald for Jewelry.",
     images: [
-      "/images/gemstones/emerald-7-94ct-1.jpg",
-      "/images/gemstones/emerald-7-94ct-2.jpg",
-      "/images/gemstones/emerald-7-94ct-3.jpg",
-      "/images/gemstones/Natural-Emerald-Loose-Gemstone-2-88-Ct.jpeg_480x480.avif",
+      "/images/gemstones/emerald-2-88ct-1.jpg",
+      "/images/gemstones/emerald-2-88ct-2.jpg",
+      "/images/gemstones/emerald-2-88ct-3.jpg",
+      "/images/gemstones/emerald-2-88ct-4.jpg",
+      "/images/gemstones/emerald-2-88ct-5.jpg",
+      "/images/gemstones/emerald-2-88ct-6.jpg",
+      "/images/gemstones/emerald-2-88ct-7.jpg",
+      "/images/gemstones/emerald-2-88ct-8.jpg",
     ],
     featured: true,
   },

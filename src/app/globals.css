@@ -393,3 +393,13 @@ input:focus, textarea:focus, select:focus {
   scrollbar-width: thin;
   scrollbar-color: #B8892B #FAF7F2;
 }
+
+/* Hide scrollbar for clean horizontal sliders */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

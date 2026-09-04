@@ -1,4 +1,3 @@
-import BuyWithConfidence from "@/components/BuyWithConfidence";
 import FAQ from "@/components/FAQ";
 import type { Metadata } from "next";
 
@@ -9,8 +8,7 @@ export const metadata: Metadata = {
 
 export default function CertificationsPage() {
   return (
-    <main className="flex-1 bg-black">
-      <BuyWithConfidence />
+    <main className="flex-1 bg-black py-12">
       <FAQ />
     </main>
   );
