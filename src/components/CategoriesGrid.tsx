@@ -5,7 +5,6 @@ interface CategoryCardProps {
   title: string;
   slug: string;
   image: string;
-  lightImage: string;
   subtitle: string;
   href?: string;
 }
@@ -14,36 +13,31 @@ const categoriesData: CategoryCardProps[] = [
   {
     title: "Yellow Sapphire",
     slug: "yellow-sapphire",
-    image: "/images/categories/Yellow sapphires.png",
-    lightImage: "/images/categories/light/yellow Sapphire.png",
+    image: "/images/categories/light/yellow Sapphire.png",
     subtitle: "Ceylon",
   },
   {
     title: "Emerald",
     slug: "emerald",
-    image: "/images/categories/Emeralds.png",
-    lightImage: "/images/categories/light/Emeralds.png",
+    image: "/images/categories/light/Emeralds.png",
     subtitle: "Zambian and Colombian",
   },
   {
     title: "Rubies",
     slug: "ruby",
-    image: "/images/categories/Rubbies.png",
-    lightImage: "/images/categories/light/Rubies.png",
+    image: "/images/categories/light/Rubies.png",
     subtitle: "Mozambique and Burma",
   },
   {
     title: "Blue Sapphire",
     slug: "blue-sapphire",
-    image: "/images/categories/Blue sapphires.png",
-    lightImage: "/images/categories/light/Blue sapphire.png",
+    image: "/images/categories/light/Blue sapphire.png",
     subtitle: "Ceylon",
   },
   {
     title: "Others",
     slug: "others",
-    image: "/images/categories/others.png",
-    lightImage: "/images/categories/light/others.png",
+    image: "/images/categories/light/others.png",
     subtitle: "Explore more",
     href: "/gemstones",
   },
@@ -71,24 +65,12 @@ export default function CategoriesGrid() {
               href={cat.href || `/gemstones/${cat.slug}`}
               className="group flex flex-col items-center text-center transition-all duration-300"
             >
-              {/* Floating Gemstone PNG Image Only (Dark & Light theme versions) */}
+              {/* Floating Gemstone PNG Image Only */}
               <div className="relative w-full aspect-square flex items-center justify-center">
-                {/* Dark Theme Category Image */}
-                <div className="dark-category-img relative w-full h-full transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-[0_12px_25px_rgba(0,0,0,0.9)]">
+                <div className="relative w-full h-full transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
                   <Image
                     src={cat.image}
                     alt={cat.title}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                    className="object-contain object-center"
-                    unoptimized
-                  />
-                </div>
-                {/* Light Theme Category Image */}
-                <div className="light-category-img relative w-full h-full transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
-                  <Image
-                    src={cat.lightImage}
-                    alt={`${cat.title} (Light Theme)`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                     className="object-contain object-center"

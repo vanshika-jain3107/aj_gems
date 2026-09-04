@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --color-black: #0B0B0B;
-  --color-charcoal: #151515;
-  --color-gold: #C9A45C;
-  --color-ivory: #F5F1E8;
-  --color-white: #FFFFFF;
+  --color-black: #FAF7F2;        /* Warm marble page background base */
+  --color-charcoal: #FFFFFF;     /* White surface / cards */
+  --color-gold: #B8892B;         /* Primary logo gold */
+  --color-ivory: #7A6F63;        /* Taupe secondary text */
+  --color-white: #2B2420;        /* Warm near-black primary text */
 
-  /* Hero Image Color Story — Light Theme Tokens */
+  /* Light Theme Color Tokens */
   --light-bg-base: #FAF7F2;       /* Warm ivory/marble tone */
   --light-bg-surface: #FFFFFF;    /* Surface / cards */
   --light-text-primary: #2B2420;  /* Warm near-black */
@@ -27,11 +27,11 @@
 }
 
 @theme {
-  --color-black: #0B0B0B;
-  --color-charcoal: #151515;
-  --color-gold: #C9A45C;
-  --color-ivory: #F5F1E8;
-  --color-white: #FFFFFF;
+  --color-black: #FAF7F2;
+  --color-charcoal: #FFFFFF;
+  --color-gold: #B8892B;
+  --color-ivory: #7A6F63;
+  --color-white: #2B2420;
 
   --color-light-bg-base: #FAF7F2;
   --color-light-bg-surface: #FFFFFF;
@@ -52,379 +52,344 @@
   --font-sans: var(--font-sans-body), "Raleway", sans-serif;
 }
 
+/* Base Body Styling — Pure Light Theme */
 body {
-  background-color: #0B0B0B;
-  color: #F5F1E8;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #FAF7F2 !important;
+  color: #2B2420 !important;
 }
 
-/* ==========================================================================
-   LIGHT THEME DESIGN SYSTEM (Marble Background & Gemstone Color Story)
-   ========================================================================== */
-
-[data-theme="light"] {
-  background-color: var(--light-bg-base);
-  color: var(--light-text-primary);
-}
-
-[data-theme="light"] body {
-  background-color: var(--light-bg-base) !important;
-  color: var(--light-text-primary) !important;
-}
-
-[data-theme="light"] main {
-  background-color: var(--light-bg-base) !important;
+main {
+  background-color: #FAF7F2 !important;
 }
 
 /* 1. Page Base & Section Background Overrides */
-[data-theme="light"] .bg-black,
-[data-theme="light"] section.bg-black,
-[data-theme="light"] main.bg-black {
-  background-color: var(--light-bg-base) !important;
+.bg-black,
+section.bg-black,
+main.bg-black {
+  background-color: #FAF7F2 !important;
 }
 
 /* 2. Surface & Card Container Overrides */
-[data-theme="light"] .bg-charcoal,
-[data-theme="light"] .bg-charcoal\/90,
-[data-theme="light"] .bg-charcoal\/95,
-[data-theme="light"] .bg-charcoal\/80,
-[data-theme="light"] .bg-charcoal\/70,
-[data-theme="light"] .bg-charcoal\/50,
-[data-theme="light"] .bg-charcoal\/40,
-[data-theme="light"] .bg-black\/40,
-[data-theme="light"] .bg-black\/60,
-[data-theme="light"] .bg-black\/80 {
-  background-color: var(--light-bg-surface) !important;
-  border-color: var(--light-border) !important;
+.bg-charcoal,
+.bg-charcoal\/90,
+.bg-charcoal\/95,
+.bg-charcoal\/80,
+.bg-charcoal\/70,
+.bg-charcoal\/50,
+.bg-charcoal\/40,
+.bg-black\/40,
+.bg-black\/60,
+.bg-black\/80 {
+  background-color: #FFFFFF !important;
+  border-color: #E8E1D6 !important;
 }
 
-[data-theme="light"] #how-it-works,
-[data-theme="light"] #how-it-works .bg-charcoal {
-  background-color: var(--light-bg-surface) !important;
+#how-it-works,
+#how-it-works .bg-charcoal {
+  background-color: #FFFFFF !important;
 }
 
 /* Header & Mobile Nav Surface */
-[data-theme="light"] header {
+header {
   background-color: rgba(255, 255, 255, 0.95) !important;
-  border-color: var(--light-border) !important;
+  border-color: #E8E1D6 !important;
 }
 
-[data-theme="light"] .mobile-nav-menu {
-  background-color: var(--light-bg-surface) !important;
-  border-color: var(--light-border) !important;
+.mobile-nav-menu {
+  background-color: #FFFFFF !important;
+  border-color: #E8E1D6 !important;
 }
 
 /* 3. Primary & Secondary Text Colors */
-[data-theme="light"] h1,
-[data-theme="light"] h2,
-[data-theme="light"] h3,
-[data-theme="light"] h4,
-[data-theme="light"] .text-white,
-[data-theme="light"] .font-serif.text-xl,
-[data-theme="light"] .font-serif.text-lg,
-[data-theme="light"] .font-serif.text-2xl,
-[data-theme="light"] .font-serif.text-3xl,
-[data-theme="light"] .font-serif.text-4xl {
-  color: var(--light-text-primary) !important;
+h1, h2, h3, h4,
+.text-white,
+.font-serif.text-xl,
+.font-serif.text-lg,
+.font-serif.text-2xl,
+.font-serif.text-3xl,
+.font-serif.text-4xl {
+  color: #2B2420 !important;
 }
 
-[data-theme="light"] p,
-[data-theme="light"] .text-ivory,
-[data-theme="light"] .text-ivory\/90,
-[data-theme="light"] .text-ivory\/85,
-[data-theme="light"] .text-ivory\/80,
-[data-theme="light"] .text-ivory\/70,
-[data-theme="light"] .text-ivory\/60,
-[data-theme="light"] .text-ivory\/50 {
-  color: var(--light-text-secondary);
+p,
+.text-ivory,
+.text-ivory\/90,
+.text-ivory\/85,
+.text-ivory\/80,
+.text-ivory\/70,
+.text-ivory\/60,
+.text-ivory\/50 {
+  color: #7A6F63;
 }
 
 /* 4. Gold Primary Brand Accents & CTAs (Buttons & Links) */
-[data-theme="light"] .text-gold,
-[data-theme="light"] .text-gold\/90,
-[data-theme="light"] .text-gold\/80,
-[data-theme="light"] .text-gold\/70,
-[data-theme="light"] .text-gold\/60,
-[data-theme="light"] .text-gold\/50,
-[data-theme="light"] .text-gold\/40,
-[data-theme="light"] .text-gold\/30 {
-  color: var(--light-gold-primary) !important;
+.text-gold,
+.text-gold\/90,
+.text-gold\/80,
+.text-gold\/70,
+.text-gold\/60,
+.text-gold\/50,
+.text-gold\/40,
+.text-gold\/30 {
+  color: #B8892B !important;
   font-weight: 600 !important;
 }
 
-[data-theme="light"] .text-gold:hover,
-[data-theme="light"] .hover\:text-gold:hover {
-  color: var(--light-gold-hover) !important;
+.text-gold:hover,
+.hover\:text-gold:hover {
+  color: #D9A94E !important;
 }
 
 /* Primary Gold Filled Button CTA styling */
-[data-theme="light"] .bg-gold,
-[data-theme="light"] a.bg-gold,
-[data-theme="light"] button.bg-gold {
-  background-color: var(--light-gold-primary) !important;
+.bg-gold,
+a.bg-gold,
+button.bg-gold {
+  background-color: #B8892B !important;
   color: #FFFFFF !important;
 }
 
-[data-theme="light"] .bg-gold span,
-[data-theme="light"] .bg-gold svg,
-[data-theme="light"] a.bg-gold span,
-[data-theme="light"] a.bg-gold svg,
-[data-theme="light"] button.bg-gold span,
-[data-theme="light"] button.bg-gold svg {
+.bg-gold span,
+.bg-gold svg,
+a.bg-gold span,
+a.bg-gold svg,
+button.bg-gold span,
+button.bg-gold svg {
   color: #FFFFFF !important;
   stroke: #FFFFFF !important;
   fill: none;
 }
 
-[data-theme="light"] .bg-gold:hover,
-[data-theme="light"] a.bg-gold:hover,
-[data-theme="light"] button.bg-gold:hover,
-[data-theme="light"] .hover\:bg-gold:hover,
-[data-theme="light"] .hover\:bg-gold\/90:hover {
-  background-color: var(--light-gold-hover) !important;
+.bg-gold:hover,
+a.bg-gold:hover,
+button.bg-gold:hover,
+.hover\:bg-gold:hover,
+.hover\:bg-gold\/90:hover {
+  background-color: #D9A94E !important;
   color: #FFFFFF !important;
 }
 
-[data-theme="light"] .bg-gold:hover span,
-[data-theme="light"] .bg-gold:hover svg,
-[data-theme="light"] a.bg-gold:hover span,
-[data-theme="light"] a.bg-gold:hover svg,
-[data-theme="light"] button.bg-gold:hover span,
-[data-theme="light"] button.bg-gold:hover svg {
+.bg-gold:hover span,
+.bg-gold:hover svg,
+a.bg-gold:hover span,
+a.bg-gold:hover svg,
+button.bg-gold:hover span,
+button.bg-gold:hover svg {
   color: #FFFFFF !important;
   stroke: #FFFFFF !important;
 }
 
-[data-theme="light"] .bg-gold:active,
-[data-theme="light"] a.bg-gold:active,
-[data-theme="light"] button.bg-gold:active,
-[data-theme="light"] .active\:bg-gold:active {
-  background-color: var(--light-gold-active) !important;
+.bg-gold:active,
+a.bg-gold:active,
+button.bg-gold:active,
+.active\:bg-gold:active {
+  background-color: #8C6218 !important;
   color: #FFFFFF !important;
 }
 
 /* Secondary Gold Soft Buttons & Outline Buttons */
-[data-theme="light"] .bg-gold\/10 {
+.bg-gold\/10 {
   background-color: rgba(184, 137, 43, 0.08) !important;
-  color: var(--light-gold-primary) !important;
+  color: #B8892B !important;
   border-color: rgba(184, 137, 43, 0.25) !important;
 }
 
-[data-theme="light"] .bg-gold\/10 span,
-[data-theme="light"] .bg-gold\/10 svg {
-  color: var(--light-gold-primary) !important;
-  stroke: var(--light-gold-primary) !important;
+.bg-gold\/10 span,
+.bg-gold\/10 svg {
+  color: #B8892B !important;
+  stroke: #B8892B !important;
 }
 
-[data-theme="light"] .bg-gold\/10:hover {
-  background-color: var(--light-gold-hover) !important;
+.bg-gold\/10:hover {
+  background-color: #D9A94E !important;
   color: #FFFFFF !important;
 }
 
-[data-theme="light"] .bg-gold\/10:hover span,
-[data-theme="light"] .bg-gold\/10:hover svg {
+.bg-gold\/10:hover span,
+.bg-gold\/10:hover svg {
   color: #FFFFFF !important;
   stroke: #FFFFFF !important;
 }
 
 /* Outline Buttons (e.g. Request More Photos / Request Video) */
-[data-theme="light"] a.border.text-gold,
-[data-theme="light"] button.border.text-gold {
-  border-color: var(--light-border) !important;
-  color: var(--light-gold-primary) !important;
+a.border.text-gold,
+button.border.text-gold {
+  border-color: #E8E1D6 !important;
+  color: #B8892B !important;
 }
 
-[data-theme="light"] a.border.text-gold span,
-[data-theme="light"] button.border.text-gold span {
-  color: var(--light-gold-primary) !important;
+a.border.text-gold span,
+button.border.text-gold span {
+  color: #B8892B !important;
   font-weight: 600 !important;
 }
 
-[data-theme="light"] a.border.text-gold svg,
-[data-theme="light"] button.border.text-gold svg {
-  color: var(--light-gold-primary) !important;
-  stroke: var(--light-gold-primary) !important;
+a.border.text-gold svg,
+button.border.text-gold svg {
+  color: #B8892B !important;
+  stroke: #B8892B !important;
 }
 
 /* 5. Borders & Dividers */
-[data-theme="light"] .border-gold,
-[data-theme="light"] .border-gold\/50,
-[data-theme="light"] .border-gold\/40,
-[data-theme="light"] .border-gold\/30,
-[data-theme="light"] .border-gold\/20,
-[data-theme="light"] .border-gold\/15,
-[data-theme="light"] .border-white\/10,
-[data-theme="light"] .border-white\/15,
-[data-theme="light"] .border-white\/5,
-[data-theme="light"] .divide-gold\/15 > :not([hidden]) ~ :not([hidden]),
-[data-theme="light"] .divide-white\/10 > :not([hidden]) ~ :not([hidden]),
-[data-theme="light"] .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
-  border-color: var(--light-border) !important;
+.border-gold,
+.border-gold\/50,
+.border-gold\/40,
+.border-gold\/30,
+.border-gold\/20,
+.border-gold\/15,
+.border-white\/10,
+.border-white\/15,
+.border-white\/5,
+.divide-gold\/15 > :not([hidden]) ~ :not([hidden]),
+.divide-white\/10 > :not([hidden]) ~ :not([hidden]),
+.divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #E8E1D6 !important;
 }
 
-[data-theme="light"] .hover\:border-gold\/60:hover,
-[data-theme="light"] .hover\:border-gold:hover {
-  border-color: var(--light-gold-primary) !important;
+.hover\:border-gold\/60:hover,
+.hover\:border-gold:hover {
+  border-color: #B8892B !important;
 }
 
-/* 6. Gemstone Accent Colors (Used sparingly for functional tags, badges & highlights) */
-[data-theme="light"] .trust-icon-circle {
-  background-color: var(--light-bg-base) !important;
-  color: var(--light-gold-primary) !important;
-  border-color: var(--light-border) !important;
+/* 6. Gemstone Accent Colors */
+.trust-icon-circle {
+  background-color: #FAF7F2 !important;
+  color: #B8892B !important;
+  border-color: #E8E1D6 !important;
 }
 
-[data-theme="light"] .trust-icon-circle svg {
-  color: var(--light-gold-primary) !important;
-  stroke: var(--light-gold-primary) !important;
+.trust-icon-circle svg {
+  color: #B8892B !important;
+  stroke: #B8892B !important;
 }
 
-[data-theme="light"] .gem-badge-emerald,
-[data-theme="light"] .gem-badge-natural {
+.gem-badge-emerald,
+.gem-badge-natural {
   background-color: rgba(31, 92, 63, 0.08) !important;
-  color: var(--gem-emerald) !important;
+  color: #1F5C3F !important;
   border-color: rgba(31, 92, 63, 0.25) !important;
   font-weight: 600 !important;
 }
 
-[data-theme="light"] .gem-badge-emerald span,
-[data-theme="light"] .gem-badge-natural span,
-[data-theme="light"] .gem-badge-emerald svg,
-[data-theme="light"] .gem-badge-natural svg {
-  color: var(--gem-emerald) !important;
-  stroke: var(--gem-emerald) !important;
+.gem-badge-emerald span,
+.gem-badge-natural span,
+.gem-badge-emerald svg,
+.gem-badge-natural svg {
+  color: #1F5C3F !important;
+  stroke: #1F5C3F !important;
 }
 
-[data-theme="light"] .gem-badge-ruby {
+.gem-badge-ruby {
   background-color: rgba(140, 28, 43, 0.08) !important;
-  color: var(--gem-ruby) !important;
+  color: #8C1C2B !important;
   border-color: rgba(140, 28, 43, 0.25) !important;
   font-weight: 600 !important;
 }
 
-[data-theme="light"] .gem-badge-sapphire {
+.gem-badge-sapphire {
   background-color: rgba(30, 63, 115, 0.08) !important;
-  color: var(--gem-sapphire) !important;
+  color: #1E3F73 !important;
   border-color: rgba(30, 63, 115, 0.25) !important;
   font-weight: 600 !important;
 }
 
-[data-theme="light"] .gem-badge-citrine {
+.gem-badge-citrine {
   background-color: rgba(214, 154, 38, 0.08) !important;
-  color: var(--gem-citrine) !important;
+  color: #D69A26 !important;
   border-color: rgba(214, 154, 38, 0.25) !important;
   font-weight: 600 !important;
 }
 
-[data-theme="light"] .gem-badge-carat {
-  background-color: var(--light-bg-base) !important;
-  color: var(--light-text-primary) !important;
-  border-color: var(--light-border) !important;
+.gem-badge-carat {
+  background-color: #FAF7F2 !important;
+  color: #2B2420 !important;
+  border-color: #E8E1D6 !important;
   font-weight: 600 !important;
 }
 
-/* Product Gallery Slider Light Theme Styling */
-[data-theme="light"] .product-gallery-btn {
+/* Product Gallery Slider Styling */
+.product-gallery-btn {
   background-color: rgba(255, 255, 255, 0.95) !important;
   color: #2B2420 !important;
   border-color: #E8E1D6 !important;
 }
 
-[data-theme="light"] .product-gallery-btn:hover {
-  background-color: var(--light-gold-primary) !important;
+.product-gallery-btn:hover {
+  background-color: #B8892B !important;
   color: #FFFFFF !important;
-  border-color: var(--light-gold-primary) !important;
+  border-color: #B8892B !important;
 }
 
-[data-theme="light"] .product-gallery-btn:hover svg {
+.product-gallery-btn:hover svg {
   color: #FFFFFF !important;
   stroke: #FFFFFF !important;
 }
 
-[data-theme="light"] .product-gallery-badge {
+.product-gallery-badge {
   background-color: rgba(255, 255, 255, 0.95) !important;
   color: #2B2420 !important;
   border-color: #E8E1D6 !important;
 }
 
 /* 7. Form Inputs */
-[data-theme="light"] input,
-[data-theme="light"] textarea,
-[data-theme="light"] select {
-  background-color: var(--light-bg-surface) !important;
-  color: var(--light-text-primary) !important;
-  border-color: var(--light-border) !important;
+input, textarea, select {
+  background-color: #FFFFFF !important;
+  color: #2B2420 !important;
+  border-color: #E8E1D6 !important;
 }
 
-[data-theme="light"] input::placeholder,
-[data-theme="light"] textarea::placeholder {
-  color: var(--light-text-secondary) !important;
+input::placeholder, textarea::placeholder {
+  color: #7A6F63 !important;
 }
 
-[data-theme="light"] input:focus,
-[data-theme="light"] textarea:focus,
-[data-theme="light"] select:focus {
-  border-color: var(--light-gold-primary) !important;
+input:focus, textarea:focus, select:focus {
+  border-color: #B8892B !important;
 }
 
-/* 8. Theme Switchers (Hero, Logo, Categories) */
-.dark-hero-banner, .dark-logo-img, .dark-category-img {
-  display: block;
-}
-.light-hero-banner, .light-logo-img, .light-category-img {
-  display: none;
-}
-
-[data-theme="light"] .dark-hero-banner,
-[data-theme="light"] .dark-logo-img,
-[data-theme="light"] .dark-category-img {
-  display: none !important;
+/* Footer WhatsApp Button Override */
+.footer-whatsapp-btn {
+  background-color: #FFFFFF !important;
+  color: #B8892B !important;
+  border-color: #B8892B !important;
 }
 
-[data-theme="light"] .light-hero-banner,
-[data-theme="light"] .light-logo-img,
-[data-theme="light"] .light-category-img {
-  display: block !important;
+.footer-whatsapp-btn span,
+.footer-whatsapp-btn svg {
+  color: #B8892B !important;
+  stroke: #B8892B !important;
 }
 
-/* 9. Scrollbar Styling */
+.footer-whatsapp-btn:hover {
+  background-color: #B8892B !important;
+  color: #FFFFFF !important;
+}
+
+.footer-whatsapp-btn:hover span,
+.footer-whatsapp-btn:hover svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+/* 8. Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0B0B;
+  background: #FAF7F2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C9A45C;
+  background: #B8892B;
   border-radius: 9999px;
-  border: 2px solid #0B0B0B;
+  border: 2px solid #FAF7F2;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E5C378;
-}
-
-[data-theme="light"] ::-webkit-scrollbar-track {
-  background: var(--light-bg-base);
-}
-
-[data-theme="light"] ::-webkit-scrollbar-thumb {
-  background: var(--light-gold-primary);
-  border: 2px solid var(--light-bg-base);
-}
-
-[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
-  background: var(--light-gold-hover);
+  background: #D9A94E;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #C9A45C #0B0B0B;
-}
-
-[data-theme="light"] * {
-  scrollbar-color: var(--light-gold-primary) var(--light-bg-base);
+  scrollbar-color: #B8892B #FAF7F2;
 }
