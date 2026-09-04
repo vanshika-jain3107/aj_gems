@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Find answers to common questions about authentic gemstones, certifications, pricing, shipping, and pre-purchase verification at AJ Gems.",
 };
 
-export default function CertificationsPage() {
+export default function FAQPage() {
   return (
     <main className="flex-1 bg-black py-12">
       <FAQ />

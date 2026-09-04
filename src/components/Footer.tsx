@@ -37,7 +37,7 @@ const navLinks = [
   { label: "GEMSTONES", href: "/gemstones" },
   { label: "ABOUT US", href: "/about" },
   { label: "WHY AJ GEMS", href: "/why-aj-gems" },
-  { label: "CERTIFICATIONS", href: "/certifications" },
+  { label: "FAQ", href: "/faq" },
   { label: "CONTACT", href: "/contact" },
 ];
 

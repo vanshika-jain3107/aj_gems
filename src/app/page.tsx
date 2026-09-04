@@ -12,8 +12,8 @@ import Location from "@/components/Location";
 export default function Home() {
   return (
     <main className="flex-1 flex flex-col bg-black">
-      <CategoriesGrid />
       <Hero />
+      <CategoriesGrid />
       <TrustStrip />
       <FeaturedGemstones />
       <WhyAJGems />

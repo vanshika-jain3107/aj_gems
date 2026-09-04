@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --color-black: #FAF7F2;        /* Warm marble page background base */
+  --color-black: #2B2420;        /* Warm near-black text */
   --color-charcoal: #FFFFFF;     /* White surface / cards */
   --color-gold: #B8892B;         /* Primary logo gold */
   --color-ivory: #7A6F63;        /* Taupe secondary text */
-  --color-white: #2B2420;        /* Warm near-black primary text */
+  --color-white: #FFFFFF;        /* Pure white */
+  --color-marble: #FAF7F2;       /* Marble base background */
 
   /* Light Theme Color Tokens */
   --light-bg-base: #FAF7F2;       /* Warm ivory/marble tone */
@@ -18,7 +19,7 @@
   --light-gold-primary: #B8892B;  /* Primary gold */
   --light-gold-hover: #D9A94E;    /* Hover / light gold */
   --light-gold-active: #8C6218;   /* Active / pressed deep gold */
-
+  
   /* Gemstone accent colors (for tags, highlights, badges, icons) */
   --gem-emerald: #1F5C3F;
   --gem-ruby: #8C1C2B;
@@ -27,11 +28,12 @@
 }
 
 @theme {
-  --color-black: #FAF7F2;
+  --color-black: #2B2420;
   --color-charcoal: #FFFFFF;
   --color-gold: #B8892B;
   --color-ivory: #7A6F63;
-  --color-white: #2B2420;
+  --color-white: #FFFFFF;
+  --color-marble: #FAF7F2;
 
   --color-light-bg-base: #FAF7F2;
   --color-light-bg-surface: #FFFFFF;

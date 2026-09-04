@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
-import { buildGeneralWhatsAppMessage, buildWhatsAppLink } from "@/lib/whatsapp";
 import MobileNav from "./MobileNav";
 
 const navLinks = [
@@ -9,15 +7,13 @@ const navLinks = [
   { label: "Gemstones", href: "/gemstones" },
   { label: "About Us", href: "/about" },
   { label: "Why AJ Gems", href: "/why-aj-gems" },
-  { label: "Certifications", href: "/certifications" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
-  const whatsappUrl = buildWhatsAppLink(buildGeneralWhatsAppMessage());
-
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E8E1D6]">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E8E1D6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
         {/* Full Uncropped Brand Logo */}
         <Link href="/" className="flex items-center gap-3.5 group py-2">
@@ -46,19 +42,6 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-
-        {/* Action Icon (WhatsApp Link) */}
-        <div className="hidden md:flex items-center gap-1.5">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp Us"
-            className="text-[#B8892B] hover:text-[#D9A94E] p-2 transition-transform duration-300 hover:scale-110"
-          >
-            <MessageCircle className="w-5 h-5" />
-          </a>
-        </div>
 
         {/* Mobile Navigation Toggle */}
         <MobileNav links={navLinks} />
