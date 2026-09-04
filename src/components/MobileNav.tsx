@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, MessageCircle } from "lucide-react";
-import { buildGeneralWhatsAppMessage, buildWhatsAppLink } from "@/lib/whatsapp";
+import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 interface NavLink {
   label: string;
@@ -16,10 +16,10 @@ interface MobileNavProps {
 
 export default function MobileNav({ links }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const whatsappUrl = buildWhatsAppLink(buildGeneralWhatsAppMessage());
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden flex items-center gap-1">
+      <ThemeToggle />
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 text-ivory hover:text-gold transition-colors focus:outline-none"
@@ -42,16 +42,6 @@ export default function MobileNav({ links }: MobileNavProps) {
               </Link>
             ))}
           </nav>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsOpen(false)}
-            className="mt-2 inline-flex items-center justify-center gap-2 border border-gold text-gold hover:bg-gold hover:text-black py-3 px-4 rounded-sm text-xs font-medium uppercase tracking-widest transition-all"
-          >
-            <MessageCircle className="w-4 h-4 fill-gold/20" />
-            WhatsApp Us
-          </a>
         </div>
       )}
     </div>

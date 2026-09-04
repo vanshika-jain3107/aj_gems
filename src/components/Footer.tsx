@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, MapPin, Globe, Phone } from "lucide-react";
+import { MessageCircle, MapPin, Globe, Phone, Store } from "lucide-react";
 import {
   buildGeneralWhatsAppMessage,
   buildWhatsAppLink,
@@ -8,6 +8,7 @@ import {
   AJ_GEMS_PHONE_RAW,
   AJ_GEMS_INSTAGRAM_URL,
   AJ_GEMS_INSTAGRAM_HANDLE,
+  AJ_GEMS_ALIBABA_URL,
 } from "@/lib/whatsapp";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -58,15 +59,23 @@ export default function Footer() {
                   width={192}
                   height={96}
                   style={{ width: "auto" }}
-                  className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_12px_rgba(201,164,92,0.35)]"
+                  className="dark-logo-img h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_12px_rgba(201,164,92,0.35)]"
+                />
+                <Image
+                  src="/images/logo-light.png"
+                  alt="AJ Gems Logo (Light Theme)"
+                  width={192}
+                  height={96}
+                  style={{ width: "auto" }}
+                  className="light-logo-img h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_12px_rgba(184,134,11,0.25)]"
                 />
               </div>
               <div className="flex flex-col justify-center border-l border-gold/30 pl-3.5 py-1">
                 <span className="text-[11px] uppercase tracking-[0.25em] text-gold font-sans font-medium">
-                  Natural Gemstones
+                  Authentic Stones
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.25em] text-ivory/80 font-sans font-light mt-0.5">
-                  Jaipur, India
+                  Genuine Trust
                 </span>
               </div>
             </Link>
@@ -133,6 +142,17 @@ export default function Footer() {
                   className="hover:text-gold transition-colors"
                 >
                   {AJ_GEMS_INSTAGRAM_HANDLE}
+                </a>
+              </div>
+              <div className="flex items-center gap-2.5 pt-1">
+                <Store className="w-4 h-4 text-gold shrink-0" />
+                <a
+                  href={AJ_GEMS_ALIBABA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors"
+                >
+                  Alibaba Store
                 </a>
               </div>
               <div className="flex items-center gap-2.5 pt-1">

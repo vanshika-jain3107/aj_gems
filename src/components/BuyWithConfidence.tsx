@@ -51,9 +51,9 @@ export default function BuyWithConfidence() {
               return (
                 <div
                   key={pt.title}
-                  className="flex items-start gap-5 p-6 rounded bg-black/40 border border-white/5 hover:border-gold/30 transition-colors"
+                  className="flex items-start gap-5 p-6 rounded bg-black/40 border border-gold/30 hover:border-gold transition-colors"
                 >
-                  <div className="p-3 rounded bg-charcoal border border-gold/30 text-gold shrink-0">
+                  <div className="trust-icon-circle p-3 rounded bg-charcoal border border-gold/30 text-gold shrink-0">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>

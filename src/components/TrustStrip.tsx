@@ -40,7 +40,7 @@ export default function TrustStrip() {
                 key={idx}
                 className="flex items-start gap-3.5 pt-4 sm:pt-0 lg:px-6 first:lg:pl-0 last:lg:pr-0"
               >
-                <div className="p-2.5 rounded-full bg-black/60 border border-gold/30 shrink-0 text-gold shadow-inner mt-0.5">
+                <div className="trust-icon-circle p-2.5 rounded-full bg-black/60 border border-gold/30 shrink-0 text-gold shadow-inner mt-0.5">
                   <Icon className="w-4 h-4" />
                 </div>
                 <div>

@@ -1,4 +1,4 @@
-import { MapPin, Navigation, MessageCircle, Clock, ExternalLink, Phone } from "lucide-react";
+import { MapPin, Navigation, MessageCircle, Clock, ExternalLink, Phone, Store } from "lucide-react";
 import {
   buildGeneralWhatsAppMessage,
   buildWhatsAppLink,
@@ -6,6 +6,7 @@ import {
   AJ_GEMS_PHONE_RAW,
   AJ_GEMS_INSTAGRAM_URL,
   AJ_GEMS_INSTAGRAM_HANDLE,
+  AJ_GEMS_ALIBABA_URL,
 } from "@/lib/whatsapp";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -93,6 +94,21 @@ export default function Location() {
                     className="text-sm text-ivory/90 hover:text-gold font-sans font-light transition-colors"
                   >
                     {AJ_GEMS_INSTAGRAM_HANDLE}
+                  </a>
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-2 text-gold font-sans text-xs uppercase tracking-widest font-medium mb-2">
+                    <Store className="w-4 h-4" />
+                    <span>Alibaba Store</span>
+                  </div>
+                  <a
+                    href={AJ_GEMS_ALIBABA_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-ivory/90 hover:text-gold font-sans font-light transition-colors underline-offset-4 hover:underline"
+                  >
+                    Alibaba Certified TrustPass Store
                   </a>
                 </div>
 

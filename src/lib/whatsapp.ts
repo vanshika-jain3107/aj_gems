@@ -11,6 +11,7 @@ export const AJ_GEMS_DISPLAY_PHONE = "+91 93520 45336";
 export const AJ_GEMS_PHONE_RAW = "+919352045336";
 export const AJ_GEMS_INSTAGRAM_URL = "https://www.instagram.com/crystal_sorcerer?igsh=MTRoMGd3NXUyaDhtZw==";
 export const AJ_GEMS_INSTAGRAM_HANDLE = "@crystal_sorcerer";
+export const AJ_GEMS_ALIBABA_URL = "https://in19081462791jbqe.trustpass.alibaba.com/";
 
 /**
  * Builds standard message for general inquiries.

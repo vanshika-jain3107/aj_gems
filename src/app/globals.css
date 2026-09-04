@@ -6,6 +6,24 @@
   --color-gold: #C9A45C;
   --color-ivory: #F5F1E8;
   --color-white: #FFFFFF;
+
+  /* Hero Image Color Story — Light Theme Tokens */
+  --light-bg-base: #FAF7F2;       /* Warm ivory/marble tone */
+  --light-bg-surface: #FFFFFF;    /* Surface / cards */
+  --light-text-primary: #2B2420;  /* Warm near-black */
+  --light-text-secondary: #7A6F63;/* Muted taupe-grey */
+  --light-border: #E8E1D6;        /* Borders / dividers */
+
+  /* Gold (primary brand accent — from logo) */
+  --light-gold-primary: #B8892B;  /* Primary gold */
+  --light-gold-hover: #D9A94E;    /* Hover / light gold */
+  --light-gold-active: #8C6218;   /* Active / pressed deep gold */
+
+  /* Gemstone accent colors (for tags, highlights, badges, icons) */
+  --gem-emerald: #1F5C3F;
+  --gem-ruby: #8C1C2B;
+  --gem-sapphire: #1E3F73;
+  --gem-citrine: #D69A26;
 }
 
 @theme {
@@ -15,16 +33,361 @@
   --color-ivory: #F5F1E8;
   --color-white: #FFFFFF;
 
+  --color-light-bg-base: #FAF7F2;
+  --color-light-bg-surface: #FFFFFF;
+  --color-light-text-primary: #2B2420;
+  --color-light-text-secondary: #7A6F63;
+  --color-light-border: #E8E1D6;
+
+  --color-gold-primary: #B8892B;
+  --color-gold-hover: #D9A94E;
+  --color-gold-active: #8C6218;
+
+  --color-emerald-gem: #1F5C3F;
+  --color-ruby-gem: #8C1C2B;
+  --color-sapphire-gem: #1E3F73;
+  --color-citrine-gem: #D69A26;
+
   --font-serif: var(--font-serif-display), "Cormorant Garamond", Georgia, serif;
-  --font-sans: var(--font-sans-body), "Inter", sans-serif;
+  --font-sans: var(--font-sans-body), "Raleway", sans-serif;
 }
 
 body {
   background-color: #0B0B0B;
   color: #F5F1E8;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Custom Aesthetic Dark-Gold Scrollbar */
+/* ==========================================================================
+   LIGHT THEME DESIGN SYSTEM (Marble Background & Gemstone Color Story)
+   ========================================================================== */
+
+[data-theme="light"] {
+  background-color: var(--light-bg-base);
+  color: var(--light-text-primary);
+}
+
+[data-theme="light"] body {
+  background-color: var(--light-bg-base) !important;
+  color: var(--light-text-primary) !important;
+}
+
+[data-theme="light"] main {
+  background-color: var(--light-bg-base) !important;
+}
+
+/* 1. Page Base & Section Background Overrides */
+[data-theme="light"] .bg-black,
+[data-theme="light"] section.bg-black,
+[data-theme="light"] main.bg-black {
+  background-color: var(--light-bg-base) !important;
+}
+
+/* 2. Surface & Card Container Overrides */
+[data-theme="light"] .bg-charcoal,
+[data-theme="light"] .bg-charcoal\/90,
+[data-theme="light"] .bg-charcoal\/95,
+[data-theme="light"] .bg-charcoal\/80,
+[data-theme="light"] .bg-charcoal\/70,
+[data-theme="light"] .bg-charcoal\/50,
+[data-theme="light"] .bg-charcoal\/40,
+[data-theme="light"] .bg-black\/40,
+[data-theme="light"] .bg-black\/60,
+[data-theme="light"] .bg-black\/80 {
+  background-color: var(--light-bg-surface) !important;
+  border-color: var(--light-border) !important;
+}
+
+[data-theme="light"] #how-it-works,
+[data-theme="light"] #how-it-works .bg-charcoal {
+  background-color: var(--light-bg-surface) !important;
+}
+
+/* Header & Mobile Nav Surface */
+[data-theme="light"] header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: var(--light-border) !important;
+}
+
+[data-theme="light"] .mobile-nav-menu {
+  background-color: var(--light-bg-surface) !important;
+  border-color: var(--light-border) !important;
+}
+
+/* 3. Primary & Secondary Text Colors */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] .text-white,
+[data-theme="light"] .font-serif.text-xl,
+[data-theme="light"] .font-serif.text-lg,
+[data-theme="light"] .font-serif.text-2xl,
+[data-theme="light"] .font-serif.text-3xl,
+[data-theme="light"] .font-serif.text-4xl {
+  color: var(--light-text-primary) !important;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] .text-ivory,
+[data-theme="light"] .text-ivory\/90,
+[data-theme="light"] .text-ivory\/85,
+[data-theme="light"] .text-ivory\/80,
+[data-theme="light"] .text-ivory\/70,
+[data-theme="light"] .text-ivory\/60,
+[data-theme="light"] .text-ivory\/50 {
+  color: var(--light-text-secondary);
+}
+
+/* 4. Gold Primary Brand Accents & CTAs (Buttons & Links) */
+[data-theme="light"] .text-gold,
+[data-theme="light"] .text-gold\/90,
+[data-theme="light"] .text-gold\/80,
+[data-theme="light"] .text-gold\/70,
+[data-theme="light"] .text-gold\/60,
+[data-theme="light"] .text-gold\/50,
+[data-theme="light"] .text-gold\/40,
+[data-theme="light"] .text-gold\/30 {
+  color: var(--light-gold-primary) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .text-gold:hover,
+[data-theme="light"] .hover\:text-gold:hover {
+  color: var(--light-gold-hover) !important;
+}
+
+/* Primary Gold Filled Button CTA styling */
+[data-theme="light"] .bg-gold,
+[data-theme="light"] a.bg-gold,
+[data-theme="light"] button.bg-gold {
+  background-color: var(--light-gold-primary) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .bg-gold span,
+[data-theme="light"] .bg-gold svg,
+[data-theme="light"] a.bg-gold span,
+[data-theme="light"] a.bg-gold svg,
+[data-theme="light"] button.bg-gold span,
+[data-theme="light"] button.bg-gold svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+  fill: none;
+}
+
+[data-theme="light"] .bg-gold:hover,
+[data-theme="light"] a.bg-gold:hover,
+[data-theme="light"] button.bg-gold:hover,
+[data-theme="light"] .hover\:bg-gold:hover,
+[data-theme="light"] .hover\:bg-gold\/90:hover {
+  background-color: var(--light-gold-hover) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .bg-gold:hover span,
+[data-theme="light"] .bg-gold:hover svg,
+[data-theme="light"] a.bg-gold:hover span,
+[data-theme="light"] a.bg-gold:hover svg,
+[data-theme="light"] button.bg-gold:hover span,
+[data-theme="light"] button.bg-gold:hover svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+[data-theme="light"] .bg-gold:active,
+[data-theme="light"] a.bg-gold:active,
+[data-theme="light"] button.bg-gold:active,
+[data-theme="light"] .active\:bg-gold:active {
+  background-color: var(--light-gold-active) !important;
+  color: #FFFFFF !important;
+}
+
+/* Secondary Gold Soft Buttons & Outline Buttons */
+[data-theme="light"] .bg-gold\/10 {
+  background-color: rgba(184, 137, 43, 0.08) !important;
+  color: var(--light-gold-primary) !important;
+  border-color: rgba(184, 137, 43, 0.25) !important;
+}
+
+[data-theme="light"] .bg-gold\/10 span,
+[data-theme="light"] .bg-gold\/10 svg {
+  color: var(--light-gold-primary) !important;
+  stroke: var(--light-gold-primary) !important;
+}
+
+[data-theme="light"] .bg-gold\/10:hover {
+  background-color: var(--light-gold-hover) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .bg-gold\/10:hover span,
+[data-theme="light"] .bg-gold\/10:hover svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+/* Outline Buttons (e.g. Request More Photos / Request Video) */
+[data-theme="light"] a.border.text-gold,
+[data-theme="light"] button.border.text-gold {
+  border-color: var(--light-border) !important;
+  color: var(--light-gold-primary) !important;
+}
+
+[data-theme="light"] a.border.text-gold span,
+[data-theme="light"] button.border.text-gold span {
+  color: var(--light-gold-primary) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] a.border.text-gold svg,
+[data-theme="light"] button.border.text-gold svg {
+  color: var(--light-gold-primary) !important;
+  stroke: var(--light-gold-primary) !important;
+}
+
+/* 5. Borders & Dividers */
+[data-theme="light"] .border-gold,
+[data-theme="light"] .border-gold\/50,
+[data-theme="light"] .border-gold\/40,
+[data-theme="light"] .border-gold\/30,
+[data-theme="light"] .border-gold\/20,
+[data-theme="light"] .border-gold\/15,
+[data-theme="light"] .border-white\/10,
+[data-theme="light"] .border-white\/15,
+[data-theme="light"] .border-white\/5,
+[data-theme="light"] .divide-gold\/15 > :not([hidden]) ~ :not([hidden]),
+[data-theme="light"] .divide-white\/10 > :not([hidden]) ~ :not([hidden]),
+[data-theme="light"] .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--light-border) !important;
+}
+
+[data-theme="light"] .hover\:border-gold\/60:hover,
+[data-theme="light"] .hover\:border-gold:hover {
+  border-color: var(--light-gold-primary) !important;
+}
+
+/* 6. Gemstone Accent Colors (Used sparingly for functional tags, badges & highlights) */
+[data-theme="light"] .trust-icon-circle {
+  background-color: var(--light-bg-base) !important;
+  color: var(--light-gold-primary) !important;
+  border-color: var(--light-border) !important;
+}
+
+[data-theme="light"] .trust-icon-circle svg {
+  color: var(--light-gold-primary) !important;
+  stroke: var(--light-gold-primary) !important;
+}
+
+[data-theme="light"] .gem-badge-emerald,
+[data-theme="light"] .gem-badge-natural {
+  background-color: rgba(31, 92, 63, 0.08) !important;
+  color: var(--gem-emerald) !important;
+  border-color: rgba(31, 92, 63, 0.25) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .gem-badge-emerald span,
+[data-theme="light"] .gem-badge-natural span,
+[data-theme="light"] .gem-badge-emerald svg,
+[data-theme="light"] .gem-badge-natural svg {
+  color: var(--gem-emerald) !important;
+  stroke: var(--gem-emerald) !important;
+}
+
+[data-theme="light"] .gem-badge-ruby {
+  background-color: rgba(140, 28, 43, 0.08) !important;
+  color: var(--gem-ruby) !important;
+  border-color: rgba(140, 28, 43, 0.25) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .gem-badge-sapphire {
+  background-color: rgba(30, 63, 115, 0.08) !important;
+  color: var(--gem-sapphire) !important;
+  border-color: rgba(30, 63, 115, 0.25) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .gem-badge-citrine {
+  background-color: rgba(214, 154, 38, 0.08) !important;
+  color: var(--gem-citrine) !important;
+  border-color: rgba(214, 154, 38, 0.25) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .gem-badge-carat {
+  background-color: var(--light-bg-base) !important;
+  color: var(--light-text-primary) !important;
+  border-color: var(--light-border) !important;
+  font-weight: 600 !important;
+}
+
+/* Product Gallery Slider Light Theme Styling */
+[data-theme="light"] .product-gallery-btn {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #2B2420 !important;
+  border-color: #E8E1D6 !important;
+}
+
+[data-theme="light"] .product-gallery-btn:hover {
+  background-color: var(--light-gold-primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--light-gold-primary) !important;
+}
+
+[data-theme="light"] .product-gallery-btn:hover svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+[data-theme="light"] .product-gallery-badge {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #2B2420 !important;
+  border-color: #E8E1D6 !important;
+}
+
+/* 7. Form Inputs */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background-color: var(--light-bg-surface) !important;
+  color: var(--light-text-primary) !important;
+  border-color: var(--light-border) !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: var(--light-text-secondary) !important;
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+  border-color: var(--light-gold-primary) !important;
+}
+
+/* 8. Theme Switchers (Hero, Logo, Categories) */
+.dark-hero-banner, .dark-logo-img, .dark-category-img {
+  display: block;
+}
+.light-hero-banner, .light-logo-img, .light-category-img {
+  display: none;
+}
+
+[data-theme="light"] .dark-hero-banner,
+[data-theme="light"] .dark-logo-img,
+[data-theme="light"] .dark-category-img {
+  display: none !important;
+}
+
+[data-theme="light"] .light-hero-banner,
+[data-theme="light"] .light-logo-img,
+[data-theme="light"] .light-category-img {
+  display: block !important;
+}
+
+/* 9. Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -44,8 +407,24 @@ body {
   background: #E5C378;
 }
 
-/* Firefox Scrollbar Support */
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: var(--light-bg-base);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: var(--light-gold-primary);
+  border: 2px solid var(--light-bg-base);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--light-gold-hover);
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: #C9A45C #0B0B0B;
+}
+
+[data-theme="light"] * {
+  scrollbar-color: var(--light-gold-primary) var(--light-bg-base);
 }

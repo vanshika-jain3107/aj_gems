@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -12,9 +12,10 @@ const cormorantGaramond = Cormorant_Garamond({
   display: "swap",
 });
 
-const inter = Inter({
+const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-sans-body",
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -62,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${inter.variable}`}
+      className={`${cormorantGaramond.variable} ${raleway.variable}`}
       suppressHydrationWarning
     >
       <body

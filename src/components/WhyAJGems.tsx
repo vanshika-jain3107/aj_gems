@@ -64,7 +64,7 @@ export default function WhyAJGems() {
                   <span className="font-serif text-3xl text-gold/30 group-hover:text-gold transition-colors">
                     {pillar.number}
                   </span>
-                  <div className="p-2.5 rounded bg-black/60 border border-gold/20 text-gold">
+                  <div className="trust-icon-circle p-2.5 rounded bg-black/60 border border-gold/20 text-gold">
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>

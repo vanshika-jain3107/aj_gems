@@ -3,6 +3,7 @@ import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { buildGeneralWhatsAppMessage, buildWhatsAppLink } from "@/lib/whatsapp";
 import MobileNav from "./MobileNav";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -29,16 +30,17 @@ export default function Navbar() {
               height={80}
               priority
               style={{ width: "auto" }}
-              className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_12px_rgba(201,164,92,0.35)]"
+              className="dark-logo-img h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_12px_rgba(201,164,92,0.35)]"
             />
-          </div>
-          <div className="hidden sm:flex flex-col justify-center border-l border-gold/30 pl-3.5 py-1">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-gold font-sans font-medium">
-              Natural Gemstones
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.25em] text-ivory/80 font-sans font-light mt-0.5">
-              Jaipur, India
-            </span>
+            <Image
+              src="/images/logo-light.png"
+              alt="AJ Gems Logo (Light Theme)"
+              width={160}
+              height={80}
+              priority
+              style={{ width: "auto" }}
+              className="light-logo-img h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_12px_rgba(184,134,11,0.25)]"
+            />
           </div>
         </Link>
 
@@ -55,16 +57,17 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop WhatsApp CTA */}
-        <div className="hidden md:flex items-center">
+        {/* Action Icons (Theme Toggle & WhatsApp Link) */}
+        <div className="hidden md:flex items-center gap-1.5">
+          <ThemeToggle />
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-gold/50 bg-black/60 text-gold hover:bg-gold hover:text-black px-4.5 py-2.5 rounded-sm text-xs font-sans uppercase tracking-widest font-semibold transition-all duration-300 shadow-sm"
+            aria-label="WhatsApp Us"
+            className="text-gold hover:text-gold/80 p-2 transition-transform duration-300 hover:scale-110"
           >
-            <MessageCircle className="w-4 h-4" />
-            WhatsApp Us
+            <MessageCircle className="w-5 h-5" />
           </a>
         </div>
 

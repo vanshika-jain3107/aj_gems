@@ -58,7 +58,7 @@ export default function HowItWorks() {
                 key={s.step}
                 className="relative z-10 flex flex-col items-center text-center p-6 bg-charcoal border border-gold/15 rounded-sm hover:border-gold/50 transition-colors"
               >
-                <div className="w-12 h-12 rounded-full bg-black border border-gold/40 flex items-center justify-center text-gold mb-4 shadow-md">
+                <div className="trust-icon-circle w-12 h-12 rounded-full bg-black border border-gold/40 flex items-center justify-center text-gold mb-4 shadow-md">
                   <Icon className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-sans uppercase tracking-widest text-gold font-semibold mb-1">
@@ -84,7 +84,7 @@ export default function HowItWorks() {
                 key={s.step}
                 className="flex items-start gap-4 p-6 bg-charcoal border border-gold/15 rounded-sm"
               >
-                <div className="w-10 h-10 rounded-full bg-black border border-gold/40 flex items-center justify-center text-gold shrink-0 mt-0.5">
+                <div className="trust-icon-circle w-10 h-10 rounded-full bg-black border border-gold/40 flex items-center justify-center text-gold shrink-0 mt-0.5">
                   <Icon className="w-4 h-4" />
                 </div>
                 <div>

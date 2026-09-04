@@ -4,7 +4,6 @@ import CategoriesGrid from "@/components/CategoriesGrid";
 import FeaturedGemstones from "@/components/FeaturedGemstones";
 import WhyAJGems from "@/components/WhyAJGems";
 import HowItWorks from "@/components/HowItWorks";
-import BuyWithConfidence from "@/components/BuyWithConfidence";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import CustomEnquiry from "@/components/CustomEnquiry";
@@ -19,7 +18,6 @@ export default function Home() {
       <FeaturedGemstones />
       <WhyAJGems />
       <HowItWorks />
-      <BuyWithConfidence />
       <About />
       <FAQ />
       <CustomEnquiry />

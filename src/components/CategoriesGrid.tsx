@@ -5,7 +5,9 @@ interface CategoryCardProps {
   title: string;
   slug: string;
   image: string;
+  lightImage: string;
   subtitle: string;
+  href?: string;
 }
 
 const categoriesData: CategoryCardProps[] = [
@@ -13,25 +15,37 @@ const categoriesData: CategoryCardProps[] = [
     title: "Yellow Sapphire",
     slug: "yellow-sapphire",
     image: "/images/categories/Yellow sapphires.png",
+    lightImage: "/images/categories/light/yellow Sapphire.png",
     subtitle: "Ceylon",
   },
   {
     title: "Emerald",
     slug: "emerald",
     image: "/images/categories/Emeralds.png",
-    subtitle: "Zimbian and Colombian",
+    lightImage: "/images/categories/light/Emeralds.png",
+    subtitle: "Zambian and Colombian",
   },
   {
     title: "Rubies",
     slug: "ruby",
     image: "/images/categories/Rubbies.png",
+    lightImage: "/images/categories/light/Rubies.png",
     subtitle: "Mozambique and Burma",
   },
   {
     title: "Blue Sapphire",
     slug: "blue-sapphire",
     image: "/images/categories/Blue sapphires.png",
+    lightImage: "/images/categories/light/Blue sapphire.png",
     subtitle: "Ceylon",
+  },
+  {
+    title: "Others",
+    slug: "others",
+    image: "/images/categories/others.png",
+    lightImage: "/images/categories/light/others.png",
+    subtitle: "Explore more",
+    href: "/gemstones",
   },
 ];
 
@@ -49,22 +63,34 @@ export default function CategoriesGrid() {
           <div className="w-12 h-px bg-gold/40 mx-auto mt-4" />
         </div>
 
-        {/* 4-Column Layout — Pure Images without Background Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        {/* 5-Column Layout — Pure Images without Background Cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {categoriesData.map((cat) => (
             <Link
-              key={cat.slug}
-              href={`/gemstones/${cat.slug}`}
+              key={cat.title}
+              href={cat.href || `/gemstones/${cat.slug}`}
               className="group flex flex-col items-center text-center transition-all duration-300"
             >
-              {/* Floating Gemstone PNG Image Only */}
+              {/* Floating Gemstone PNG Image Only (Dark & Light theme versions) */}
               <div className="relative w-full aspect-square flex items-center justify-center">
-                <div className="relative w-full h-full transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-[0_12px_25px_rgba(0,0,0,0.9)]">
+                {/* Dark Theme Category Image */}
+                <div className="dark-category-img relative w-full h-full transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-[0_12px_25px_rgba(0,0,0,0.9)]">
                   <Image
                     src={cat.image}
                     alt={cat.title}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    className="object-contain object-center"
+                    unoptimized
+                  />
+                </div>
+                {/* Light Theme Category Image */}
+                <div className="light-category-img relative w-full h-full transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
+                  <Image
+                    src={cat.lightImage}
+                    alt={`${cat.title} (Light Theme)`}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                     className="object-contain object-center"
                     unoptimized
                   />
